@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Daily Weather Report - Caledon Woods Golf Club</title>
+  <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+<script async>
+const url = './data/2023/03/06/03-daily.json'
+const fetchJsonData = async (url) => {
+  try {
+    const data = await fetch(url)
+    const response = await data.json()
+  } catch (err) {
+    console.log(err)
+  }
+}
+const report_data = fetchJsonData(url)
+console.log(report_data)
+</script>
+</body>
+</html>
