@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="css/report.css">
 </head>
 <body>
-<script>
+<script>(async() => {
+
+console.log('dev running')
 
 const fetchJsonData = async (url) => {
   try {
@@ -15,9 +17,6 @@ const fetchJsonData = async (url) => {
     console.log(err)
   }
 } 
-
-</script>
-<script>(async() => {
 
 const url = './data/2023/03/06/08-daily.json'
 const report_data = await fetchJsonData(url)
