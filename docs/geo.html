@@ -5,9 +5,12 @@
   <link rel="stylesheet" href="css/report.css">
 </head>
 <body>
+  <p id="latitude"></p>
+  <p id="longitude"></p>
 <script>
 navigator.geolocation.getCurrentPosition((position) => {
-  console.log(position.coords.latitude, position.coords.longitude)
+  document.getElementById('latitude').innerHTML = position.coords.latitude;
+  document.getElementById('longitude').innerHTML = position.coords.latitude;
 })
 </script>
 </body>

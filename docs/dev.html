@@ -18,9 +18,10 @@ const fetchJsonData = async (url) => {
   }
 } 
 
-const url = 'data/2023/03/10/01-hourly.json'
+const url = 'https://michaelmahgu.github.io/caledon-woods-weather-reports/data/2023/03/10/01-hourly.json'
 try {
   const report_data = await fetchJsonData(url)
+  console.log(report_data)
 } catch (err) {
   console.error(err)
 }
