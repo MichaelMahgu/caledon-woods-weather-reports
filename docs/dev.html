@@ -5,27 +5,30 @@
   <link rel="stylesheet" href="css/report.css">
 </head>
 <body>
-<script>(async() => {
-
-console.log('dev running')
-
-const fetchJsonData = async (url) => {
-  try {
-    const data = await fetch(url)
-    return await data.json()
-  } catch (err) {
-    console.log(err)
-  }
-} 
+<script>
 
 const url = 'https://michaelmahgu.github.io/caledon-woods-weather-reports/data/2023/03/10/01-hourly.json'
-try {
-  const report_data = await fetchJsonData(url)
-  console.log(report_data)
-} catch (err) {
-  console.error(err)
-}
+const url2 = 'data/2023/03/10/01-hourly.json'
+const url3 = './data/2023/03/10/01-hourly.json'
 
-})()</script>
+// url 1
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error)=> console.error(error))
+
+// url 2
+fetch(url2)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error)=> console.error(error))
+
+// url 3
+fetch(url3)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error)=> console.error(error))
+
+</script>
 </body>
 </html>
