@@ -18,8 +18,12 @@ const fetchJsonData = async (url) => {
   }
 } 
 
-const url = './data/2023/03/06/08-daily.json'
-const report_data = await fetchJsonData(url)
+const url = 'data/2023/03/10/01-hourly.json'
+try {
+  const report_data = await fetchJsonData(url)
+} catch (err) {
+  console.error(err)
+}
 
 })()</script>
 </body>
