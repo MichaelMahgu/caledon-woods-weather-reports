@@ -17,11 +17,11 @@
 navigator.geolocation.getCurrentPosition((position) => {
   document.getElementById('latitude').innerHTML = position.coords.latitude;
   document.getElementById('longitude').innerHTML = position.coords.longitude;
-  document.getElementById('accuracy').innerHTML = position.coords.accuracy;
-  document.getElementById('heading').innerHTML = position.coords.heading;
-  document.getElementById('speed').innerHTML = position.coords.speed;
-  document.getElementById('altitude').innerHTML = position.coords.altitude;
-  document.getElementById('altitude_accuracy').innerHTML = position.coords.altitude_accuracy;
+  document.getElementById('accuracy').innerHTML = position.coords.accuracy === 'undefined' ? '[undefined]' : position.coords.accuracy;
+  document.getElementById('heading').innerHTML = position.coords.heading === 'undefined' ? '[undefined]' : position.coords.heading;
+  document.getElementById('speed').innerHTML = position.coords.speed === 'undefined' ? '[undefined]' : position.coords.speed;
+  document.getElementById('altitude').innerHTML = position.coords.altitude === 'undefined' ? '[undefined]' : position.coords.altitude;
+  document.getElementById('altitude_accuracy').innerHTML = position.coords.altitude_accuracy === 'undefined' ? '[undefined]' : position.coords.altitude_accuracy;
 })
 </script>
 </body>
