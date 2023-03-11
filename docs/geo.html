@@ -7,10 +7,21 @@
 <body>
   <p id="latitude"></p>
   <p id="longitude"></p>
+  <p id="accuracy"></p>
+  <p id="heading"></p>
+  <p id="speed"></p>
+  <p id="altitude"></p>
+  <p id="altitude_accuracy"></p>
+
 <script>
 navigator.geolocation.getCurrentPosition((position) => {
   document.getElementById('latitude').innerHTML = position.coords.latitude;
   document.getElementById('longitude').innerHTML = position.coords.longitude;
+  document.getElementById('accuracy').innerHTML = position.coords.accuracy;
+  document.getElementById('heading').innerHTML = position.coords.heading;
+  document.getElementById('speed').innerHTML = position.coords.speed;
+  document.getElementById('altitude').innerHTML = position.coords.altitude;
+  document.getElementById('altitude_accuracy').innerHTML = position.coords.altitude_accuracy;
 })
 </script>
 </body>
